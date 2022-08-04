@@ -1,5 +1,5 @@
 {
-  "name": "lgcc-database",
+  "name": "ls-indexed-db",
   "version": "0.0.1",
   "description": "我的测试",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "indexedDB"
   ],
   "author": "lgcc",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ls-vy/database/issues"
   },
