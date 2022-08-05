@@ -11,11 +11,11 @@
 ``` js
 // 例子
 import {createIndexedDB} from "lgcc-database";
-const stores = [
+const stores = [{
   name: "storeName",
   mainKey: "id", //主键(无主键就默认自增主键)
   index: ["name", "group"], //索引
-]
+}]
 createIndexedDB("databaseName",stores)
 ```
 
