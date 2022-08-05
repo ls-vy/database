@@ -1,6 +1,6 @@
 {
   "name": "ls-indexed-db",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "我的测试",
   "main": "index.js",
   "scripts": {
