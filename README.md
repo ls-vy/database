@@ -36,8 +36,8 @@ import {$db} from "lgcc-database";
 $db:{
   get:()=>{},
   add:()=>{},
-  delete:()=>{},
-  update:()=>{},
+  del:()=>{},
+  upd:()=>{},
 }
 */
 $db.get("databaseName",{
@@ -47,13 +47,13 @@ $db.add("databaseName",{
   sname: "storeName",
   data: {/*...*/},
 })
-$db.delete("databaseName",{
+$db.del("databaseName",{
   sname: "storeName",
   key: 1,//id
 })
 
 // IDBObjectStore.put()会根据data中的mainKey进行数据替换（即修改）
-$db.update("databaseName",{
+$db.upd("databaseName",{
   sname: "storeName",
   data: {/*...*/},
 })

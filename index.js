@@ -323,7 +323,7 @@ export const $db = {
       throw err;
     });
   },
-  delete(dbname, {
+  del(dbname, {
     sname = "",
     key
   }) {
@@ -355,7 +355,7 @@ export const $db = {
       throw err;
     });
   },
-  update(dbname, {
+  upd(dbname, {
     sname = "",
     data
   }) {
