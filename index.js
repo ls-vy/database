@@ -6,11 +6,11 @@ const $CODE = {
 const $RES = {
   paramsError: {
     code: $CODE.ERROR,
-    data: "参数错误！",
+    msg: "参数错误！",
   },
   connectFail: {
     code: $CODE.FAIL,
-    data: "连接失败！",
+    msg: "连接失败！",
   }
 }
 const $DATA = {
@@ -35,7 +35,7 @@ const $FN = {
       }
       req.onerror = (err) => {
         console.log(`打开数据库失败：`, err);
-        rj({ code: $CODE.ERROR, data: "打开数据库失败！" });
+        rj({ code: $CODE.ERROR, msg: "打开数据库失败！" });
       }
     });
   },
@@ -259,7 +259,7 @@ export const $db = {
         req.onerror = () => {
           reject({
             code:$CODE.FAIL,
-            data: "查询失败！"
+            msg: "查询失败！"
           });
         }
       });
@@ -297,7 +297,7 @@ export const $db = {
           req.onerror = (err) => {
             reject({
               code: $CODE.FAIL,
-              data: "新增失败！"
+              msg: "新增失败！"
             });
           }
         }else{
@@ -314,7 +314,7 @@ export const $db = {
           req.onerror = (err) => {
             reject({
               code: $CODE.FAIL,
-              data: "新增失败！"
+              msg: "新增失败！"
             });
           }
         }
@@ -379,7 +379,7 @@ export const $db = {
         req.onerror = (err) => {
           reject({
             code: $CODE.FAIL,
-            data: "修改失败！"
+            msg: "修改失败！"
           });
         }
       });
