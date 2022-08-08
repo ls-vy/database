@@ -91,7 +91,7 @@ const $FN = {
 }
 
 // 创建数据库
-export function createIndexedDB(dbname, stores, config) {
+export function createIndexedDB(dbname, stores, initData, config) {
   /*
     dbname: string,
     stores: array<item>，
@@ -100,6 +100,9 @@ export function createIndexedDB(dbname, stores, config) {
         mainKey: string, //主键(无主键就默认自增主键)
         index: array<string>,
       }
+    initData:{ // 初始化添加的数据
+      [storeName]: array,
+    },
     config: {
       upgrade: boolean,//是否升级版本，true:版本++
     }
@@ -116,6 +119,12 @@ export function createIndexedDB(dbname, stores, config) {
         };
         if (prop.mainKey) addparam.keyPath = prop.mainKey;
         let store = db.createObjectStore(prop.name, addparam);
+        // 添加数据
+        if(initData?.[prop.name] && initData?.[prop.name].length>0){
+          for(let item of initData[prop.name]||[]){
+            store.add(item);
+          }
+        }
         // 添加索引
         for (let key of prop.index || []) {
           store.createIndex(key, key, {

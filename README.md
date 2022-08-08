@@ -10,13 +10,13 @@
 
 ``` js
 // 例子
-import {createIndexedDB} from "lgcc-database";
+import {createIndexedDB} from "ls-indexed-db";
 const stores = [{
   name: "storeName",
   mainKey: "id", //主键(无主键就默认自增主键)
   index: ["name", "group"], //索引
 }]
-createIndexedDB("databaseName",stores)
+createIndexedDB("databaseName",stores);
 ```
 
 ## 2.删除数据库
@@ -24,14 +24,14 @@ createIndexedDB("databaseName",stores)
 
 ``` js
 // 例子
-import {deleteIndexedDB} from "lgcc-database";
+import {deleteIndexedDB} from "ls-indexed-db";
 deleteIndexedDB("databaseName")
 ```
 
 ## 3.操作数据
 ``` js
 // 例子
-import {$db} from "lgcc-database";
+import {$db} from "ls-indexed-db";
 /*
 $db:{
   get:()=>{},

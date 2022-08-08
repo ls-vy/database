@@ -21,7 +21,7 @@ export interface ResponseType {
   msg?: string;
 }
 
-export function createIndexedDB(dbname: string, stores: Array<StoreType>, config?: ConfigType): void;
+export function createIndexedDB(dbname: string, stores: Array<StoreType>,initData:{[prop:string]:Array<any>}|undefined|null, config?: ConfigType): void;
 
 export function deleteIndexedDB(dbname: string): void;
 
